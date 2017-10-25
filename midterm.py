@@ -68,7 +68,6 @@ def beer_info():
 			data = r['data']
 		else:
 			data = 'NULL'
-		print(data)
 		username = request.cookies.get('username')
 		now = datetime.now().time()
 		today5pm = now.replace(hour=17, minute=0, second=0, microsecond=0)
