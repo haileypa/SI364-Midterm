@@ -1,6 +1,6 @@
 ## SI 364
 ## Fall 2017
-## HW 3
+## Midterm
 ## Hailey Patterson
 
 from flask import Flask, request, render_template, redirect, url_for, flash, json, make_response
