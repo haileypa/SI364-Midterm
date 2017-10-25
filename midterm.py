@@ -17,7 +17,7 @@ app.debug = True
 
 
 class UserForm(FlaskForm):
-	username =StringField('Enter your beer drinking alias:', validators=[ Required() ])
+	username =StringField('Enter your beer drinking alias:')
 	submit = SubmitField('Submit')
 
 class SearchBeerForm(FlaskForm):
