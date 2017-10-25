@@ -18,24 +18,22 @@ app.debug = True
 
 class UserForm(FlaskForm):
 	username =StringField('Enter your beer drinking alias:')
-	submit = SubmitField('Submit')
+	submit = SubmitField('Submit and Search!')
 
 class SearchBeerForm(FlaskForm):
     beer = StringField('Enter a beer:', validators=[ Required() ])
-    submit = SubmitField('Submit')
+    submit = SubmitField('Search Beers!')
 
 class SearchBreweryForm(FlaskForm):
     brewery = StringField('Enter a brewery:', validators=[ Required() ])
-    submit = SubmitField('Submit')
+    submit = SubmitField('Search Breweries!')
 
 
 @app.route('/')
 def hello_beer_world():
 	userForm = UserForm()
-
 	return render_template("home.html", userForm=userForm )
 
-# @app.route('/setcookie', methods = ['POST', 'GET'])
 
 @app.route('/search', methods= ['POST','GET'])
 def search():
